@@ -6,15 +6,12 @@ import { config } from '../../firebase-config';
 import { AngularFireModule } from 'angularfire2';
 import {AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AutenticaProvider } from '../providers/autentica/autentica';
-import { ServicosProvider } from '../providers/servicos/servicos';
+import * as servicos from '../providers/servicos/servicos';
 import { CategoriasServicosProvider } from '../providers/categoriasservicos/categoriasservicos';
 
 @NgModule({
@@ -39,7 +36,7 @@ import { CategoriasServicosProvider } from '../providers/categoriasservicos/cate
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AutenticaProvider,
-    ServicosProvider,
+    servicos.ServicosProvider,
     CategoriasServicosProvider
   ]
 })
