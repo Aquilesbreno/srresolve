@@ -2,6 +2,7 @@ import { Observable } from 'rxjs/Observable';
 import { ServicosProvider } from '../../providers/servicos/servicos';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { ServicosPageModule } from '../servicos/servicos.module';
 
 
 

@@ -23,8 +23,8 @@ export class BemvindoPage {
 
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BemvindoPage');
-  }
+  //ionViewDidLoad() {
+   // console.log('ionViewDidLoad BemvindoPage');
+  //}
 
 }
