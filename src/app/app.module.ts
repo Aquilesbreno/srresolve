@@ -12,7 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AutenticaProvider } from '../providers/autentica/autentica';
 import * as servicos from '../providers/servicos/servicos';
-import { CategoriasServicosProvider } from '../providers/categoriasservicos/categoriasservicos';
+import { CategoriasProvider } from '../providers/categorias/categorias';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { CategoriasServicosProvider } from '../providers/categoriasservicos/cate
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AutenticaProvider,
     servicos.ServicosProvider,
-    CategoriasServicosProvider
+    CategoriasProvider
   ]
 })
 export class AppModule {}
