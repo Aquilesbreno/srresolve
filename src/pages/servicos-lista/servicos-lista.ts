@@ -11,13 +11,14 @@ import {ServicosProvider} from './../../providers/servicos/servicos'
   templateUrl: 'servicos-lista.html',
 })
 export class ServicosListaPage {
+  servicos: any;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private toast: ToastController,
     private servicosProvider: ServicosProvider) {
 
-      //this.servicos = this.servicosProvider.getAll();//aqui ta guardando todos os produtos
+      this.servicos = this.servicosProvider.getAll();//aqui ta guardando todos os produtos
 }
 
 newItemServicos(){ // push é método que chama/abre uma página

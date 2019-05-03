@@ -27,6 +27,8 @@ export class HomePage {
   sair(){
     this.angularFireAuth.auth.signOut();
     this.userName='';
+    this.navCtrl.setRoot('BemvindoPage');
+
   }
 
   }

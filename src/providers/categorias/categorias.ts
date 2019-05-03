@@ -1,5 +1,5 @@
 import { AngularFireDatabase } from 'angularfire2/database';
-import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { FirebaseApp } from 'angularfire2';
 import * as firebase from 'firebase';
@@ -14,10 +14,10 @@ constructor(private db:AngularFireDatabase) {
 
 public getAll(){
   return this.db.list(this.PATH)
-    .snapshotChanges()
-    .map(changes =>{
+    .snapshotChanges().pipe(
+      map(changes =>{
       return changes.map(m=> ({ key: m.key, ...m.payload.val() }))
-    })
+    }))
 }
 
 get(categoriaKey:string){

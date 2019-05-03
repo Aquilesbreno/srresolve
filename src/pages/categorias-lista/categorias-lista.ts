@@ -20,6 +20,7 @@ export class CategoriasListaPage {
      private toast: ToastController,
      private categoriasProvider: CategoriasProvider
      ) {
+
        this.categorias = this.categoriasProvider.getAll();
   }
 
