@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AutenticaProvider } from './../../providers/autentica/autentica';
-import {AngularFireAuth } from 'angularfire2/auth';
+import {AngularFireAuth } from '@angular/fire/auth';
 
 
 @IonicPage()

@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AutenticaProvider } from './../providers/autentica/autentica';
-import {AngularFireAuth } from 'angularfire2/auth';
+import {AngularFireAuth } from '@angular/fire/auth';
 import { HomePage } from '../pages/home/home';
 
 

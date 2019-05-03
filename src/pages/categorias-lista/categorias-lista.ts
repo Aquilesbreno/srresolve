@@ -5,7 +5,6 @@ import { Observable } from 'rxjs/Observable';
 
 
 
-
 @IonicPage()
 @Component({
   selector: 'page-categorias-lista',

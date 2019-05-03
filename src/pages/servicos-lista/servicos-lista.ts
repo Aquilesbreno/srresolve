@@ -32,17 +32,13 @@ this.navCtrl.push('ServicosEditaPage', {produtokey: produto.key});
 }
 
 
-removeItemServicos(produtokey:string, hasImg: boolean){
-this.servicosProvider.remove(produtokey, hasImg);
-this.toast.create({
-message:"Servicos removidos com sucesso",
-duration: 3000,
-position: 'botton'}).present();
-
-
-}
-
-
+  removeItemServicos(produtokey:string, hasImg: boolean){
+    // this.servicosProvider.remove(produtokey, hasImg);
+    this.toast.create({
+    message:"Servicos removidos com sucesso",
+      duration: 3000,
+      position: 'botton'}).present();
+  }
 
 
 

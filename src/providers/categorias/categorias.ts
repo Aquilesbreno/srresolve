@@ -1,8 +1,6 @@
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { FirebaseApp } from 'angularfire2';
-import * as firebase from 'firebase';
 
 
 @Injectable()
@@ -16,16 +14,16 @@ public getAll(){
   return this.db.list(this.PATH)
     .snapshotChanges().pipe(
       map(changes =>{
-      return changes.map(m=> ({ key: m.key, ...m.payload.val() }))
+      return changes.map(m=> ({ key: m.payload.key, ...m.payload.val() }));
     }))
 }
 
 get(categoriaKey:string){
   return this.db.object(this.PATH + categoriaKey)
-  .snapshotChanges()
-  .map(m => {
+  .snapshotChanges().pipe(
+  map(m => {
     return { key: m.key, ...m.payload.val()};
-  });
+  }));
 }
 
 save(categoriaForm: any){
